@@ -24,6 +24,6 @@ Windows平台基于 [Windows@10](https://www.microsoft.com/zh-cn)，Linux平台�
 
 - 每个脚本都可以通过 `--help`、`-help`、`-h` 可选命令来查看帮助说明。
 - 关于安装jdk、mysql、nginx等脚本的使用，几乎都是使用源码进行编译安装，或者二进制安装包进行安装，所以需要下载源码或二进制文件上传到Ubuntu。
-- sh脚本上传到Ubuntu上，需要vim编辑脚本执行`:set ff=unix` 将Windows平台下的换行符改为Linux系统的换行符
+- 换行符已由仓库根目录的 `.gitattributes` 统一处理（`*.sh` 强制 LF、`*.bat` 强制 CRLF），通过 `git clone` 拉取的 sh 脚本上传或在 Ubuntu 上直接执行，无需再手动 `:set ff=unix` 转换；仅当绕过 git 直接从 Windows 文件系统复制脚本文件时，才可能需要自行转换。
 
 ## 引用
